@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace Buku - Platform Jual Beli Buku Digital & Fisik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset dan Variabel */
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-purple: #7c3aed;
+            --text-dark: #1f2937;
+            --background-light: #f9fafb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-menu {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-menu a:hover {
+            color: #dbeafe;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            text-align: center;
+            padding: 4rem 5%;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Fitur Section */
+        .fitur-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 3rem 5%;
+        }
+
+        .fitur-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .fitur-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .fitur-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #111827;
+            color: white;
+            padding: 3rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar, .hero, .fitur-section, .footer {
+                padding: 1rem 3%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <i class="fas fa-book-open mr-2"></i>
+            Marketplace Buku
+        </div>
+        <div class="navbar-menu">
+            <a href="#">Beranda</a>
+            <a href="tampilanBuku.html">Buku</a>
+            <a href="#">Lelang</a>
+            <a href="#">Masuk</a>
+            <a href="tambahBuku.html">Tambah Buku</a>
+
+            <button class="bg-white text-blue-600 px-4 py-2 rounded-full">Daftar</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Revolusi Jual Beli Buku Digital</h1>
+        <p>Platform blockchain untuk jual beli buku fisik dan digital dengan kepemilikan unik</p>
+        <div>
+            <button class="bg-white text-blue-600 px-6 py-3 rounded-full mr-4">Jelajahi Buku</button>
+            <button class="border-2 border-white text-white px-6 py-3 rounded-full">Pelajari Lebih Lanjut</button>
+        </div>
+    </section>
+
+    <!-- Fitur Section -->
+    <section class="fitur-section">
+        <div class="fitur-card">
+            <i class="fas fa-link"></i>
+            <h3>Blockchain & Kepemilikan</h3>
+            <p>Sertifikat kepemilikan unik untuk setiap buku digital</p>
+        </div>
+        <div class="fitur-card">
+            <i class="fas fa-coins"></i>
+            <h3>Metode Pembayaran</h3>
+            <p>Kartu kredit, e-wallet, dan cryptocurrency</p>
+        </div>
+        <div class="fitur-card">
+            <i class="fas fa-hammer"></i>
+            <h3>Sistem Lelang</h3>
+            <p>Jual buku edisi terbatas melalui lelang digital</p>
+        </div>
+        <div class="fitur-card">
+            <i class="fas fa-book-reader"></i>
+            <h3>E-Reader Digital</h3>
+            <p>Baca buku digital dengan fitur anotasi canggih</p>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-section">
+            <h4>Marketplace Buku</h4>
+            <p>Platform inovatif untuk jual beli buku digital dan fisik</p>
+        </div>
+        <div class="footer-section">
+            <h4>Tautan Cepat</h4>
+            <a href="#">Beranda</a>
+            <a href="#">Buku</a>
+            <a href="#">Lelang</a>
+            <a href="#">Bantuan</a>
+        </div>
+        <div class="footer-section">
+            <h4>Hubungi Kami</h4>
+            <p>Email: support@marketplacebuku.com</p>
+            <p>Telepon: +62 812-3456-7890</p>
+        </div>
+        <div class="footer-section">
+            <h4>Ikuti Kami</h4>
+            <div>
+                <a href="#" class="mr-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="mr-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="mr-3"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
